@@ -6,6 +6,11 @@
 
 int	main(void)
 {
-	ft_putnbr(0);
+	char buffer[80];
+	char *msg = "This is the string: not copied";
+    memset( buffer, '\0', 80 );
+    memccpy( buffer, msg, ':', 80 );
+
+    printf( "%s\n", buffer );
 	return (0);
 }
