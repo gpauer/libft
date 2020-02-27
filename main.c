@@ -7,6 +7,6 @@
 
 int	main(void)
 {
-    printf("%d", ft_isascii(128));
+    ft_putchar(ft_tolower('a'));
     return 0;
 }
