@@ -8,23 +8,24 @@ char	*ft_strstr(const char *haystack, const char *needle)
 	len = ft_strlen(needle) - 1;
 	i = 0;
 	j = 0;
-	while (haystack[i] != '\0')
-	{
-		while (haystack[i] == needle[j])
-		{
-			i++;
-			j++;
-			if (j == len)
-			{
-				return ((char*)haystack + i - j);
-				break;
-			}
-		}
-		i++;
-		j = 0;
-	}
 	if (needle[0] == '\0')
 		return ((char*)haystack);
-	else
-		return ('\0');
+	while (haystack[i] != '\0')
+	{
+		if (haystack[i] == needle[j])
+		{
+			if (j == len)
+				return((char*)haystack + i - j);
+			i++;
+			j++;
+			if (haystack[i] != needle[j])
+				i--;
+		}
+		else
+		{
+			i++;
+			j = 0;
+		}
+	}
+	return ('\0');
 }

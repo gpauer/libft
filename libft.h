@@ -28,3 +28,4 @@ int	ft_isascii(int c);
 int	ft_isprint(int c);
 int	ft_toupper(int c);
 int	ft_tolower(int c);
+char	*ft_strnstr(const char *s1, const char *s2, size_t n);

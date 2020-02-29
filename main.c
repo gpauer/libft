@@ -7,6 +7,6 @@
 
 int	main(void)
 {
-    ft_putchar(ft_tolower('a'));
-    return 0;
+	printf("%s" ,ft_strstr("me", ""));
+	return 0;
 }
