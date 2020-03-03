@@ -7,6 +7,6 @@
 
 int	main(void)
 {
-	printf("%s" ,ft_strstr("me", ""));
+	printf("%s" ,ft_strnstr("123 4567890", "45", 5));
 	return 0;
 }

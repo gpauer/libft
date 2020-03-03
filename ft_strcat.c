@@ -1,5 +1,3 @@
-#include <stdlib.h>
-#include "libft.h"
 char	*ft_strcat(char *dest, const char *src)
 {
 	int 	i;
@@ -9,7 +7,6 @@ char	*ft_strcat(char *dest, const char *src)
 	j = 0;
 	while (dest[i] != '\0')
 	{
-	//	dest[i] = dest[i];
 		i++;
 	}
 	while (src[j] != '\0')
