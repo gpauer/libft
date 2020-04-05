@@ -1,9 +1,8 @@
 #include "libft.h"
-#include "stdio.h"
 
 void	ft_putnbr(int n)
 {
-	int m;
+	unsigned int m;
 
 	if (n < 0)
 	{
@@ -19,4 +18,6 @@ void	ft_putnbr(int n)
 		ft_putnbr(n);
 		ft_putchar(m + '0');
 	}
+	if (n == -2147483648)
+		ft_putstr("2147483648");
 }

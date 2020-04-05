@@ -2,21 +2,20 @@
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
         unsigned int i;
+	unsigned int d1;
+	unsigned int d2;
 
 	i = 0;
 	while (i != n)
 	{
-		if (s1[i] > s2[i])
-		{
+		d1 = s1[i];
+		d2 = s2[i];
+		if (d1 > d2)
 			return (1);
-			break;
-		}
-		if (s1[i] < s2[i])
-		{
+		else if (d1 < d2)
 			return (-1);
-			break;
-		}
-		i++;
+		else
+			i++;
 	}
 	return (0);
 }

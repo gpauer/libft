@@ -2,24 +2,26 @@
 
 int	ft_atoi(const char *nptr)
 {
-	int nbr;
-	int i;
-	int j;
-	
+	int	i;
+	int	nbr;
+	int	neg;
+
+	neg = 1;
 	nbr = 0;
-	i = ft_strlen(nptr);
-	j = 1;
-	while (--i >= 0)
+	i = 0;
+	while ((nptr[i] >= 7 && nptr[i] <= 13) || nptr[i] == 32)
+		i++;
+	while (ft_isdigit(nptr[i]) > 0 || (nptr[i] == '-' && ft_isdigit(nptr[i + 1]) > 0) || (nptr[i] == '+' && ft_isdigit(nptr[i + 1]) > 0))
 	{
-		if (nptr[i] >= '0' && nptr[i] <= '9')
-		{
-			nbr += ((nptr[i] - '0') * j);
-			j *= 10;
-		}
+		if (ft_isdigit(nptr[i]) == 0 && nbr != 0)
+			return (nbr * neg);
 		if (nptr[i] == '-')
-		{
-			nbr *= -1;
-		}
+			neg = -1;
+		else if (nptr[i] == '+')
+			neg = 1;
+		else
+			nbr = (nbr * 10) + (nptr[i] - '0');
+		i++;
 	}
-	return (nbr);
+	return (nbr * neg);
 }

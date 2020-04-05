@@ -7,6 +7,6 @@
 
 int	main(void)
 {
-	printf("%s" ,ft_strnstr("123 4567890", "45", 5));
-	return 0;
+	ft_putnbr(2147483647);
+	return (0);
 }
