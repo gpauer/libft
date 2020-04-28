@@ -1,24 +1,23 @@
 #include <string.h>
 #include <stdlib.h>
+#include "libft.h"
 void    *ft_memmove(void *dest, const void *src, size_t n)
 {
         unsigned int            i;
 	char			*buf;
 
-        i = 0;
-	buf = (char*)malloc(sizeof(char) * (n + 1));
-        while (i != n)
-        {
-                buf[i] = ((char*)src)[i];
-                i++;
-        }
-        buf[i] = '\0';
+	buf = (char*)malloc(sizeof(src));
 	i = 0;
-	while (buf[i] != '\0')
+	while (ft_isascii(((char*)src)[i]) != 0)
+	{
+		buf[i] = ((char*)src)[i];
+		i++;
+	}
+	i = 0;
+	while (i != n)
 	{
 		((char*)dest)[i] = buf[i];
 		i++;
 	}
-	((char*)dest)[i] = buf[i];
-        return (dest);
+	return (dest);
 }
