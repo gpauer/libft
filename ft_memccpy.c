@@ -2,15 +2,15 @@
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-	unsigned int            i;
+	unsigned int	i;
 
 	i = 0;
 	while (i != n)
 	{
 		((char*)dest)[i] = ((char*)src)[i];
-		if (((char*)dest)[i] == c)
-			return (dest);			
+		if (((char*)src)[i] == c)
+			return (dest + i + 1);
 		i++;
 	}
-	return (dest);
+	return (0);
 }
