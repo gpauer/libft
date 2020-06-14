@@ -7,10 +7,16 @@
 
 int	main(void)
 {
-	char s1[] = "1234567890";
-	char s2[] = "abcdefghij";
+	char	*dest;
+	int	i;
 
-	strlcpy(s2, s1, 6);
-	printf("%s", s2);
+	i = 0;
+	dest = (char*)malloc(sizeof(char) * 15);
+	ft_strlcpy(dest, "", 15);
+	while (i != 15)
+	{
+		printf("%d", dest[i]);
+		i++;
+	}
 	return (0);
 }
