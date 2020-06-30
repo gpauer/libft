@@ -32,3 +32,5 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n);
 void	*ft_memalloc(size_t size);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 void	*ft_calloc(size_t nmemb, size_t size);
+void    ft_memdel(void **ap);
+char	*ft_strnew(size_t size);
